@@ -32,5 +32,6 @@ jobs:
         DJANGO_SETTINGS_MODULE: "config.settings"
         SECRET_KEY: "ci-secret-key-for-testing"
       run: |
-        uv run python manage.py migrate
+        uv run python manage.py makemigrations accounts
+        uv run python manage.py migrate --database=default
         uv run pytest
