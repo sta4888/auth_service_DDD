@@ -10,3 +10,7 @@ class InvalidEmailError(DomainError):
 class WeakPasswordError(DomainError):
     """Выбрасывается, если пароль не соответствует требованиям безопасности."""
     pass
+
+class UserAlreadyExistsError(DomainError):
+    """Выбрасывается, если пользователь с таким email уже существует."""
+    pass
