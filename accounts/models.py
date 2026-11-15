@@ -1,3 +1,4 @@
-from django.db import models
+from accounts.infrastructure.models import UserORM
 
-# Create your models here.
+# Экспортируем модель, чтобы Django ORM и миграции её видели
+__all__ = ["UserORM"]
